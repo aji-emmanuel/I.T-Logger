@@ -1,0 +1,61 @@
+{
+  "logs": [
+    {
+      "id": 1,
+      "message": "Changed the switches",
+      "attention": false,
+      "tech": "Sam Smith",
+      "date": "11-15-2021"
+    },
+    {
+      "id": 2,
+      "message": "Set up lighting",
+      "attention": true,
+      "tech": "Maria Blitz",
+      "date": "11-16-2021"
+    },
+    {
+      "id": 3,
+      "message": "Fixed a faulty air-conditional",
+      "attention": false,
+      "tech": "Josh Milkman",
+      "date": "11-17-2021"
+    },
+    {
+      "message": "Change the faulty keyboard",
+      "attention": true,
+      "tech": "Maria Blitz",
+      "date": "2021-11-23T20:09:01.382Z",
+      "id": 5
+    },
+    {
+      "message": "Test321",
+      "attention": true,
+      "tech": "Maria Blitz",
+      "date": "2021-11-23T22:01:07.235Z",
+      "id": 6
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "Maria",
+      "lastName": "Blitz"
+    },
+    {
+      "id": 2,
+      "firstName": "Josh",
+      "lastName": "Milkman"
+    },
+    {
+      "id": 3,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 4,
+      "firstName": "Baba",
+      "lastName": "Lampard"
+    }
+  ]
+}

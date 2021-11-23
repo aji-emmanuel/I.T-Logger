@@ -1,24 +1,37 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import 'materialize-css/dist/css/materialize.min.css';
+import M from 'materialize-css/dist/js/materialize.min.js';
 import './App.css';
+import SearchBar from './component/layout/SearchBar';
+import Logs from './component/logs/Logs';
+import AddBtn from './component/layout/AddBtn';
+import AddLogModal from './component/logs/AddLogModal';
+import EditLogModal from './component/logs/EditLogModal';
+import AddTechModal from './component/techs/AddTechModal';
+import TechListModal from './component/techs/TechListModal';
+import {Provider} from 'react-redux';
+import store from './store';
+
 
 function App() {
+  useEffect(()=>{
+    // Initailizes Materialize javascript
+    M.AutoInit();
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+    <>
+      <SearchBar />
+      <div className='container'>
+        <AddBtn />
+        <AddLogModal />
+        <EditLogModal />
+        <AddTechModal />
+        <TechListModal />
+        <Logs />
+      </div>
+    </>
+    </Provider>
   );
 }
 
