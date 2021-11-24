@@ -1,27 +1,25 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed the switches",
-      "attention": false,
+      "message": "Set up lighting for workstation",
+      "attention": true,
       "tech": "Maria Blitz",
-      "date": "11-15-2021",
-      "": "true"
+      "date": "2021-11-24T22:29:45.854Z",
+      "id": 1
     },
     {
       "message": "Faulty keyboard fixed!",
       "attention": false,
-      "tech": "Sam Smith",
-      "date": "2021-11-23T20:09:01.382Z",
-      "id": 5,
-      "": "false"
+      "tech": "Pedro Swag",
+      "date": "2021-11-24T22:36:20.050Z",
+      "id": 2
     },
     {
       "message": "Change faulty air-conditional",
       "attention": true,
-      "tech": "Pedro Swag",
-      "date": "2021-11-24T22:18:21.432Z",
-      "id": 6
+      "tech": "Sam Smith",
+      "date": "2021-11-24T22:36:47.763Z",
+      "id": 3
     }
   ],
   "techs": [
