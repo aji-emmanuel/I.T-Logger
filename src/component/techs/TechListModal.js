@@ -1,25 +1,16 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 // import Preloader from '../layout/Preloader';
 import TechItem from './TechItem';
+import { getTechs } from '../../actions/techActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const TechListModal = () => {
-
-    const [techs, setTechs] = useState([]);
-    const [loading, setLoading] = useState(false);
+const TechListModal = ({ techs, loading, getTechs }) => {
 
     useEffect(()=>{
-        loadTechs();
-        // eslint disable-next-line
+        getTechs();
+        // eslint-disable-next-line
     }, []);
-
-    const loadTechs = async () =>{
-        setLoading(true);
-        const res = await fetch('/techs');
-        const data = await res.json();
-        setTechs(data);
-        setLoading(false);
-    };
-
 
     return (
         <div id='tech-list-modal' className='modal'>
@@ -38,7 +29,18 @@ const TechListModal = () => {
                 <a href='#!' className='modal-close waves-effect blue waves-light btn'>Close</a>
             </div>
         </div>
-    )
-}
+    );
+};
+ 
+TechListModal.propTypes ={
+    techs: PropTypes.array,
+    loading: PropTypes.bool,
+    getTechs: PropTypes.func.isRequired
+};
 
-export default TechListModal;
+const mapStateToProps =(state)=>({
+    techs: state.tech.techs,
+    loading: state.tech.loading
+});
+
+export default connect(mapStateToProps, {getTechs})(TechListModal);

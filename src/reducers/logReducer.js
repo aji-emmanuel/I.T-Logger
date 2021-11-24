@@ -20,7 +20,7 @@ const logReducer = (state = initialState, action) => {
         case ADD_LOG:
             return{
                 ...state,
-                logs: [action.payload, ...state.logs],
+                logs: [...state.logs, action.payload],
                 loading: false
             };
         case UPDATE_LOG:

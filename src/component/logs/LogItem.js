@@ -12,7 +12,7 @@ const Logitem = ({log, deleteLog, setCurrent}) => {
 
     const onDelete = () =>{
         deleteLog(log.id);
-        M.toast({html: `Log with ID = ${log.id} was successfully deleted!`})
+        M.toast({html: `Log with ID #${log.id} was successfully deleted!`})
     };
 
     return (

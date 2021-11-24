@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { connect } from 'react-redux';
 import { updateLog, clearCurrent } from '../../actions/logActions';
+import TechSelectOptions from '../techs/TechSelectOptions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import PropTypes from 'prop-types';
 
@@ -28,7 +29,6 @@ const EditLogModal = ({current, updateLog, clearCurrent}) => {
         } else{
             
             updateLog(log);
-            console.log(log.attention)
             clearCurrent();
             M.toast({html: `Log with ID #${log.id} updated by ${tech}!`});
         };
@@ -60,9 +60,7 @@ const EditLogModal = ({current, updateLog, clearCurrent}) => {
                     <div className='input-field'>
                         <select className='browser-default' name='tech' value={tech} onChange={onChange}>
                             <option value='' disabled>Select Technicians</option>
-                            <option value='Sam Smith'>Sam Smith</option>
-                            <option value='Maria Blitz'>Maria Blitz</option>
-                            <option value='Josh Milkman'>Josh Milkman</option>
+                            < TechSelectOptions />
                         </select>
                     </div>
                 </div>

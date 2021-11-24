@@ -4,53 +4,41 @@
       "id": 1,
       "message": "Changed the switches",
       "attention": false,
-      "tech": "Sam Smith",
+      "tech": "Maria Blitz",
       "date": "11-15-2021",
       "": "true"
     },
     {
-      "id": 2,
-      "message": "Set up lighting for workstation",
-      "attention": true,
-      "tech": "Sam Smith",
-      "date": "11-16-2021"
-    },
-    {
-      "id": 3,
-      "message": "Change faulty air-conditional",
-      "attention": true,
-      "tech": "Maria Blitz",
-      "date": "11-17-2021"
-    },
-    {
       "message": "Faulty keyboard fixed!",
       "attention": false,
-      "tech": "Maria Blitz",
+      "tech": "Sam Smith",
       "date": "2021-11-23T20:09:01.382Z",
       "id": 5,
       "": "false"
+    },
+    {
+      "message": "Change faulty air-conditional",
+      "attention": true,
+      "tech": "Pedro Swag",
+      "date": "2021-11-24T22:18:21.432Z",
+      "id": 6
     }
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "Maria",
-      "lastName": "Blitz"
-    },
-    {
-      "id": 2,
-      "firstName": "Josh",
-      "lastName": "Milkman"
-    },
-    {
-      "id": 3,
       "firstName": "Sam",
-      "lastName": "Smith"
+      "lastName": "Smith",
+      "id": 1
     },
     {
-      "id": 4,
-      "firstName": "Baba",
-      "lastName": "Lampard"
+      "firstName": "Maria",
+      "lastName": "Blitz",
+      "id": 2
+    },
+    {
+      "firstName": "Pedro",
+      "lastName": "Swag",
+      "id": 3
     }
   ]
 }
