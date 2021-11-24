@@ -6,7 +6,8 @@ import {
     DELETE_LOG,
     UPDATE_LOG,
     SET_CURRENT,
-    CLEAR_CURRENT
+    CLEAR_CURRENT,
+    SEARCH_LOG
 } from './types';
 
 // Gets the logs
@@ -50,7 +51,7 @@ export const updateLog = (log) => async dispatch =>{
             body: JSON.stringify(log),
             headers: {'Content-Type' : 'application/json'}
         });
-        const data = res.json();
+        const data = await res.json();
         dispatch({type: UPDATE_LOG, payload: data});
     } catch (err) {
         dispatch({type: LOG_ERROR, payload: err.response.data})
@@ -64,6 +65,19 @@ export const deleteLog = (id) => async dispatch =>{
         await fetch(`/logs/${id}`, {method: 'DELETE'});
         dispatch({ type: DELETE_LOG, payload: id});
        
+    } catch (err) {
+        dispatch({type: LOG_ERROR, payload: err.response.data});
+    };
+};
+
+// Search logs from server
+export const searchLogs = (text) => async dispatch =>{
+
+    try {
+        setLoading();
+        const res = await fetch(`/logs?q=${text}`);
+        const data = await res.json();
+        dispatch({ type: SEARCH_LOG, payload: data});
     } catch (err) {
         dispatch({type: LOG_ERROR, payload: err.response.data});
     };

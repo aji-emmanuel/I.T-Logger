@@ -5,35 +5,30 @@
       "message": "Changed the switches",
       "attention": false,
       "tech": "Sam Smith",
-      "date": "11-15-2021"
+      "date": "11-15-2021",
+      "": "true"
     },
     {
       "id": 2,
-      "message": "Set up lighting",
+      "message": "Set up lighting for workstation",
       "attention": true,
-      "tech": "Maria Blitz",
+      "tech": "Sam Smith",
       "date": "11-16-2021"
     },
     {
       "id": 3,
-      "message": "Fixed a faulty air-conditional",
-      "attention": false,
-      "tech": "Josh Milkman",
+      "message": "Change faulty air-conditional",
+      "attention": true,
+      "tech": "Maria Blitz",
       "date": "11-17-2021"
     },
     {
-      "message": "Change the faulty keyboard",
-      "attention": true,
+      "message": "Faulty keyboard fixed!",
+      "attention": false,
       "tech": "Maria Blitz",
       "date": "2021-11-23T20:09:01.382Z",
-      "id": 5
-    },
-    {
-      "message": "Test321",
-      "attention": true,
-      "tech": "Maria Blitz",
-      "date": "2021-11-23T22:01:07.235Z",
-      "id": 6
+      "id": 5,
+      "": "false"
     }
   ],
   "techs": [
